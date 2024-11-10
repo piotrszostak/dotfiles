@@ -1,0 +1,77 @@
+# config for i3wm; endevourOS 
+
+# meta key is modifier
+set $mod Mod4
+# Use Mouse+$mod to drag windows
+floating_modifier $mod
+
+# import bindings
+include ~/.config/i3/binds.conf
+
+# autostart
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id xrfb ~/.Xresources
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# keyboard and mouse
+exec --no-startup-id setxkbmap -option "ctrl:nocaps"
+exec --no-startup-id xset r rate 330 33
+exec --no-startup-id xinput --set-prop 12 309 0.7
+# apperance and bar
+exec_always --no-startup-id autotiling
+exec_always --no-startup-id picom --config  ~/.config/picom.conf
+exec_always --no-startup-id blueman-applet
+#exec_always --no-startup-id caffeine
+exec --no-startup-id feh --no-fehbg --bg-scale --randomize '/home/ps/Pictures/tlo'
+exec --no-startup-id xfce4-clipman
+exec --no-startup-id nm-applet
+# other background apps
+exec --no-startup-id syncthing
+exec --no-startup-id virsh net-start default
+
+# bar
+bar {
+    font pango: 0xProto Nerd Font 12
+    font pango: JetBrains Mono 12
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    position top
+}
+
+# apperance
+font pango:Cascadia Code 14
+font pango:FiraCode 14
+font pango:JetBrains Mono 14
+font pango:0xProto Nerd Font 14
+
+# border decorations
+default_border pixel 2
+default_floating_border normal
+hide_edge_borders smart_no_gaps
+gaps inner 1
+gaps outer 1
+gaps bottom 1
+
+# border colors
+# class                 border  backgr. text    indicator child_border
+client.focused          #7f7fff #1e222a #f9fafa #1c1b22   #7f7fff
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+# floating rules
+# set floating (nontiling) for apps needing it
+for_window [class="Yad" instance="yad"] floating enable
+for_window [class="Galculator" instance="galculator"] floating enable
+for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
+
+# set floating (nontiling) for special apps
+for_window [class="Xsane" instance="xsane"] floating enable
+for_window [class="qt5ct" instance="qt5ct"] floating enable
+#for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
+for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
+for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
+for_window [class="Pamac-manager"] floating enable
+for_window [window_role="About"] floating enable
+
