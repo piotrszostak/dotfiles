@@ -1,0 +1,88 @@
+configuration {
+    font: "JetBrains Mono 18";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    terminal: "kitty";
+    display-drun: "";
+    display-run: "";
+    display-window: "";
+    drun-display-format: "{name}";
+    sidebar-mode: false;
+}
+
+window {
+    width: 35%;
+    border-radius: 8px;
+    background-color: #1a1b26;
+    border: 2px solid;
+}
+
+mainbox {
+    padding: 12px;
+    background-color: transparent;
+}
+
+inputbar {
+    background-color: #24283b;
+    border-radius: 6px;
+    padding: 8px;
+    margin: 0 0 12px 0;
+    children: [prompt, entry];
+}
+
+prompt {
+    enabled: true;
+    padding: 0 8px 0 0;
+    text-color: #7aa2f7;
+}
+
+entry {
+    placeholder: "Search...";
+    placeholder-color: #565f89;
+    text-color: #c0caf5;
+    background-color: transparent;
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 9;
+    spacing: 3px;
+    cycle: false;
+    dynamic: true;
+    layout: vertical;
+    fixed-height: true;
+    fixed-columns: true;
+}
+
+element {
+    padding: 8px;
+    spacing: 8px;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: #c0caf5;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: #c0caf5;
+}
+
+element selected.normal {
+    background-color: #33467c;
+    text-color: #eeeeee;
+}
+
+element-icon {
+    size: 22px;
+    vertical-align: 0.5;
+}
+
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+}
