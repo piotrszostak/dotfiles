@@ -1,4 +1,5 @@
 alias aliasy="nvim ~/.config/fish/conf.d/aliases.fish"
+alias bindy="nvim"
 
 alias .="pwd"
 alias ..="cd .."
