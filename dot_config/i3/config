@@ -30,16 +30,12 @@ exec --no-startup-id virsh net-start default
 
 # bar
 bar {
-    font pango: 0xProto Nerd Font 12
     font pango: JetBrains Mono 12
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
     position top
 }
 
 # apperance
-font pango:Cascadia Code 14
-font pango:FiraCode 14
-font pango:JetBrains Mono 14
 font pango:0xProto Nerd Font 14
 
 # border decorations
@@ -65,8 +61,6 @@ client.background       #ffffff
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
-
-# set floating (nontiling) for special apps
 for_window [class="Xsane" instance="xsane"] floating enable
 for_window [class="qt5ct" instance="qt5ct"] floating enable
 #for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
