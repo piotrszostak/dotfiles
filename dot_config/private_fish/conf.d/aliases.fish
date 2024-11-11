@@ -1,6 +1,9 @@
+#* ~/.config/fish/conf.d/aliases.fish *#
 alias aliasy="nvim ~/.config/fish/conf.d/aliases.fish"
 alias bindy="nvim ~/.config/i3/binds.conf"
 alias dots="ranger ~/.local/share/chezmoi/dot_config/"
+
+alias logout="i3-msg exit"
 
 alias .="pwd"
 alias ..="cd .."
