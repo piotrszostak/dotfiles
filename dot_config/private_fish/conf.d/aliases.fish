@@ -1,26 +1,24 @@
 #* ~/.config/fish/conf.d/aliases.fish *#
 alias aliasy="nvim ~/.config/fish/conf.d/aliases.fish"
 alias bindy="nvim ~/.config/i3/binds.conf"
+alias config="nvim ~/.config/i3/config"
 alias dots="ranger ~/.local/share/chezmoi/dot_config/"
+alias f='chezmoi'
+alias fu='chezmoi re-add'
+alias fs='cd $HOME/.local/share/chezmoi/ | fish | gs'
 
+alias off="poweroff"
 alias logout="i3-msg exit"
 
 alias .="pwd"
 alias ..="cd .."
 alias ...="cd ../.."
 
-alias cp="cp -i"
-alias mv='mv -i'
-alias rm='rm -i'
-
 alias l='exa -al --color=always --group-directories-first'
 alias lt='exa -aT --color=always --group-directories-first'
-
-alias f='chezmoi'
 alias h='history'
 alias v='nvim'
 
-# adding flags
 alias df='df -h' # human-readable sizes
 alias free='free -m' # show sizes in MB
 alias grep='grep --color=auto'
@@ -32,11 +30,11 @@ alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias psmem='ps auxf | sort -nr -k 4'
 alias pscpu='ps auxf | sort -nr -k 3'
 
+alias err='sudo journalctl -u'
 alias syc='sudo systemctl'
 alias syd='sudo systemd'
 alias vpn='nmcli connection up'
 
-alias doom='/home/ps/.config/emacs/bin/doom'
 alias timer='termdown'
 
 # docker
